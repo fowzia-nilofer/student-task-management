@@ -1,0 +1,119 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+}
+
+.add-task, .filters {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.task-item.completed {
+  text-decoration: line-through;
+  background: #f3f3f3;
+}
+
+.priority {
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: white;
+  font-size: 0.8em;
+}
+
+.filters button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+}
+
+.filters button.active {
+  background: #007bff;
+  color: white;
+}
+
+/* Calendar tile events styling */
+.calendar-view .react-calendar {
+  width: 100%;
+  border: none;
+  font-family: inherit;
+}
+
+/* Compact list inside each day tile */
+.calendar-tile-list {
+  list-style: none;
+  padding: 4px 6px 0 6px;
+  margin: 6px 0 0 0;
+  display: block;
+}
+
+.calendar-tile-task {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  line-height: 1;
+  margin-bottom: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* small colored dot indicating priority */
+.calendar-dot {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  border-radius: 50%;
+  flex: 0 0 auto;
+  margin-top: 2px;
+}
+
+/* truncated title in tile */
+.calendar-task-title {
+  display: inline-block;
+  max-width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* "+n more" line */
+.calendar-more {
+  font-size: 0.68rem;
+  color: #374151;
+  margin-top: 2px;
+}
+
+/* Selected day's task list below calendar */
+.calendar-day-list { margin-top: 12px; }
+.calendar-day-list .small { font-size: 0.85rem; color: #6b7280; margin-left: 6px; }
+.calendar-list-item { padding: 8px; border-radius: 6px; border: 1px solid #e5e7eb; margin-bottom: 8px; }
+.calendar-list-item.completed { opacity: 0.7; text-decoration: line-through; background:#f9fafb; }
+.calendar-list-item .meta { margin-top:6px; display:flex; gap:8px; align-items:center; }
+.pill { background:#eef2ff; padding:3px 8px; border-radius:999px; font-size:0.75rem; }
+.priority-pill { background:#fff1f2; color:#9f1239; }
+
+/* small description */
+.calendar-list-item .desc { margin:6px 0 0; color:#374151; font-size:0.9rem; }
